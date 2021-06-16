@@ -1,0 +1,29 @@
+%% Projeto 07
+% *Autor:* Marlon da Silva Rogério
+
+%% Referências
+% *GONZALEZ, R. C.*, WOODS, R. E. Processamento de Imagens Digitais. 
+% Editora Edgard Blucher, ISBN São Paulo, 2000.
+% *Support MathWorks*, 2021. Disponível em: <https://www.mathworks.com/help/>.
+% Acesso em: 31 de maio. de 2021.
+
+close all; clear; clc;
+
+%% 1 Transformada Wavelet & Multiresolução
+% Utilizando a transformada Wavelet e a teoria de sub-bandas:
+% 1.1 Identificar e analisar ‘ruído’ de uma imagem
+% 1.2 Crie um algoritmo simples para subtrair ruído de uma imagem
+% 1.2.1 Visualizar e comentar
+
+
+img_original = imread('tumografia.tif');
+figure;
+imshow(img_original);
+title('Imagem Original');
+
+%%
+mediana_adp = adpmedian(img_original, 11);
+figure;
+subplot
+imshow(mediana_adp);
+title('Imagem Original');
